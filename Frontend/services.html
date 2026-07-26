@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - Campus Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+.chatbot-name {
+  position: absolute;
+  top: 20px;
+  left: 30px;   
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--accent);
+  text-decoration: none;
+  z-index: 100; 
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.chatbot-name:hover {
+  color: var(--primary-2);
+  transform: scale(1.05);
+}
+    .services-page {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 80px 20px;
+    }
+    .services-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .services-header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .services-header p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(108,77,211,0.35);
+    }
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background circles -->
+  <div class="bg-circles">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+    <div class="circle c4"></div>
+  </div>
+  <!-- Top-right chatbot name -->
+<a href="index.html" class="chatbot-name">Campus Chatbot</a>
+  <div class="services-page">
+    <div class="services-header">
+      <h1>Our Services</h1>
+      <p>Explore how Campus Chatbot makes student life easier</p>
+    </div>
+
+    <div class="services-grid">
+  <div class="service-card">
+    <h3>Fee & Scholarship Assistance</h3>
+    <p>Get instant updates on fee deadlines, scholarship forms, and payment reminders.</p>
+  </div>
+  <div class="service-card">
+    <h3>Timetable & Academic Info</h3>
+    <p>Access your class schedules, exam dates, and academic circulars anytime.</p>
+  </div>
+  <div class="service-card">
+    <h3>Multi-language Support</h3>
+    <p>Chat in English, Hindi, or your regional language for a personalized experience.</p>
+  </div>
+  <div class="service-card">
+    <h3>24/7 Availability</h3>
+    <p>Campus Chatbot is always online to answer your queries, day or night.</p>
+  </div>
+  <div class="service-card">
+    <h3>Human Staff Fallback</h3>
+    <p>Complex queries are seamlessly escalated to university staff for resolution.</p>
+  </div>
+  <div class="service-card">
+    <h3>Daily Chat Logs</h3>
+    <p>Conversations are analyzed to improve responses and optimize FAQs.</p>
+  </div>
+  <!-- New Service 1 -->
+  <div class="service-card">
+    <h3>Multi‑Platform Integration</h3>
+    <p>Embed the chatbot on the college website and connect it to WhatsApp, Telegram, and Messenger for maximum reach.</p>
+  </div>
+  <!-- New Service 2 -->
+  <div class="service-card">
+    <h3>Privacy & Volunteer‑Friendly Management</h3>
+    <p>All chats are anonymized and logged. A simple admin UI lets student volunteers curate and improve responses while protecting privacy.</p>
+  </div>
+</div>
+  </div>
+</body>
+</html>

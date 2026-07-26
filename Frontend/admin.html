@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="static/admin.css" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <ul>
+      <li><button class="tab active" data-tab="users">Users</button></li>
+      <li><button class="tab" data-tab="upload">Upload Documents</button></li>
+      <li><button class="tab" data-tab="docs">Manage Documents</button></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <!-- Users -->
+    <section id="users" class="tab-content active">
+      <h2>User Management</h2>
+      <form id="addUserForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <select id="role">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button type="submit" class="addbtn">Add User</button>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="usersBody"></tbody>
+      </table>
+    </section>
+
+    <!-- Upload -->
+    <section id="upload" class="tab-content">
+      <h2>Upload Document</h2>
+      <form id="uploadForm">
+        <input type="file" id="docFile" accept="application/pdf" required>
+        <button type="submit">Upload</button>
+      </form>
+      <p id="uploadMsg"></p>
+    </section>
+
+    <!-- Documents -->
+    <section id="docs" class="tab-content">
+      <h2>All Documents</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>Uploaded By</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="docsBody"></tbody>
+      </table>
+    </section>
+  </div>
+  <script src="static/admin.js"></script>
+</body>
+
+</html>

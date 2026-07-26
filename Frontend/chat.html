@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Agnostic Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/chat.css">
+</head>
+
+<body>
+  <!-- Background circles -->
+  <div class="bg-circles">
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+    <div class="circle c4"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo">🤖</div>
+      <h1 class="navbar-title">College Query Assistant Chatbot</h1>
+    </div>
+
+    <div class="navbar-right">
+      <div class="Logout" id="logout">
+        <button class="log-btn" id="log-btn">Logout</button>
+      </div>
+      <h1 class="navbar-title">Choose Language</h1>
+      <div class="language-dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+          <span id="selected-language">English</span>
+          <span>▼</span>
+        </button>
+
+        <div class="dropdown-content" id="language-dropdown">
+          <div class="dropdown-item" onclick="selectLanguage('English')">English (default)</div>
+          <div class="dropdown-item" onclick="selectLanguage('Hindi')">Hindi</div>
+          <div class="dropdown-item" onclick="selectLanguage('Marathi')">Marathi</div>
+          <div class="dropdown-item" onclick="selectLanguage('Gujarati')">Gujarati</div>
+          <div class="dropdown-item" onclick="selectLanguage('Malayalam')">Malayalam</div>
+          <div class="dropdown-item" onclick="selectLanguage('Bengali')">Bengali</div>
+          <div class="dropdown-item" onclick="selectLanguage('Telugu')">Telugu</div>
+          <div class="dropdown-item" onclick="selectLanguage('Tamil')">Tamil</div>
+          <div class="dropdown-item" onclick="selectLanguage('Kannada')">Kannada</div>
+          <div class="dropdown-item" onclick="selectLanguage('Punjabi')">Punjabi</div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Chat Container -->
+  <div class="chat-container">
+    <div class="chat-header">Welcome to the Language Agnostic Chatbot</div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="message bot">
+        <div>Hello! I am your Language Agnostic Chatbot. I can communicate with you in multiple languages. How can I
+          help you today?</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="input-container">
+    <div class="input-wrapper">
+      <input type="text" class="message-input" id="message-input" placeholder="Type your message...">
+      <div class="input-actions">
+        <button class="send-btn" id="send-btn">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/chat-v2.js"></script>
+</body>
+
+</html>

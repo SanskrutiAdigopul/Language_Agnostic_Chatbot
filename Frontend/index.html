@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<div class="bg-circles">
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+  <div class="circle c4"></div>
+</div>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-badge">
+        <img src="robot.png" alt="Campus Chatbot Logo">
+      </div>
+      <span>Campus Chatbot</span>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="signup.html">Signup</a>
+      <a href="login.html">Login</a>
+      <a href="#about">About us</a>
+      <a href="services.html">Services</a>
+      <a class="cta" href="login.html">Start Conversation</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><span class="eyebrow-dot"></span> University's assistant</span>
+        <h1>UNIVERSITY'S DOCUMENT &amp; CONVERSATION ASSISTANT</h1>
+        <p><strong>Ask in English, Hindi, or your local language</strong><br />
+          Get instant answers!</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="chat.html">GET STARTED</a>
+          <a class="btn" href="#services">Explore services</a>
+        </div>
+      </div>
+
+      <div class="hero-card" aria-label="Demo panel">
+        <div class="hero-card-header">
+          <div class="traffic-dot red"></div>
+          <div class="traffic-dot yellow"></div>
+          <div class="traffic-dot green"></div>
+          <span style="margin-left:8px;color:var(--muted);font-weight:600">Campus Chatbot</span>
+        </div>
+        <div class="card-body">
+          <div class="card-line"><span class="dot"></span> Ask anything about fees, scholarships, or timetables.</div>
+          <div class="card-line"><span class="dot"></span> Multi-language support: English, Hindi, regional languages.
+          </div>
+          <div class="card-line"><span class="dot"></span> 24/7 availability with human fallback.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">ABOUT US</h2>
+      <p class="section-sub">What is Campus Chatbot?</p>
+    </div>
+
+    <div class="about-wrap">
+      <div class="about-card">
+        <h4>Campus Chatbot</h4>
+        <ul class="about-list">
+          <li><span class="check"></span> Helps with fee deadlines, scholarship forms, timetables</li>
+          <li><span class="check"></span> Multi-language support (English, Hindi, regional languages)</li>
+          <li><span class="check"></span> 24/7 availability</li>
+          <li><span class="check"></span> Saves staff workload</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <h4>Why students use it</h4>
+        <ul class="about-list">
+          <li><span class="check"></span> Instant answers to routine queries</li>
+          <li><span class="check"></span> Context-aware conversations</li>
+          <li><span class="check"></span> Seamless handoff to staff when needed</li>
+          <li><span class="check"></span> Easy access from website &amp; mobile</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">KEY FEATURES</h2>
+      <p class="section-sub">Built for universities and students</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature">
+        <h4>Multi-language Support</h4>
+        <p>English, Hindi, and regional languages</p>
+      </div>
+      <div class="feature">
+        <h4>Context-aware conversations</h4>
+        <p>Understands follow-ups and maintains session context</p>
+      </div>
+      <div class="feature">
+        <h4>PDF &amp; Circular answers</h4>
+        <p>Responds directly from official docs and notices</p>
+      </div>
+      <div class="feature">
+        <h4>Fallback to human staff</h4>
+        <p>Escalates complex queries to university staff</p>
+      </div>
+      <div class="feature">
+        <h4>Daily chat logs for improvement</h4>
+        <p>Insights to optimize FAQs and responses</p>
+      </div>
+      <div class="feature">
+        <h4>AI-powered Insights</h4>
+        <p>Analyzes student queries to improve services and decision-making</p>
+      </div>
+    </div>
+
+    <div class="section-actions">
+      <a class="btn primary" href="#features">KEY FEATURES</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer id="contact">
+  <div class="container">
+    <p>&copy; Campus Chatbot · All rights reserved</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script>
+  document.body.classList.add('__enter-prep');
+
+  // Run on first paint
+  window.addEventListener('DOMContentLoaded', () => {
+    // Pick common elements to stagger in (adjust selectors if you like)
+    const els = document.querySelectorAll([
+      '.nav .brand',
+      '.nav-links a',
+      '.hero .eyebrow',
+      '.hero h1',
+      '.hero p',
+      '.hero-actions .btn',
+      '.hero-card',
+      '.about-card',
+      '.feature',
+      '.section-head',
+      'footer'
+    ].join(','));
+
+    // Tag elements for animation + set subtle stagger
+    els.forEach((el, i) => {
+      el.setAttribute('data-enter', '');
+      el.style.transitionDelay = (80 * i) + 'ms';
+    });
+
+    // Next frame: start transitions
+    requestAnimationFrame(() => {
+      document.body.classList.remove('__enter-prep');
+      document.body.classList.add('__enter-ready');
+    });
+  });
+
+  // Also re-run when coming back via bfcache (looks like a reload)
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted) {
+      document.body.classList.remove('__enter-ready');
+      void document.body.offsetWidth; // reflow to restart transitions
+      document.body.classList.add('__enter-ready');
+    }
+  });
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Modal functionality
+  const modal = document.getElementById('contactModal');
+  const contactLinks = document.querySelectorAll('a[href="#contact"]');
+  const closeBtn = document.querySelector('.close');
+
+  contactLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+</body>
+
+</html>

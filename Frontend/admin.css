@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background: #f4f6f9;
+  color: #2c3e50;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #1e272e;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+  flex: 1;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: none;
+  color: #dcdde1;
+  text-align: left;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+  background: #176baf;
+  color: #fff;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #2f3640;
+}
+
+form {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+input, select, button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background: #dc2f2f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #a91b1b;
+}
+.addbtn{
+    color: rgb(255, 255, 255);
+    background-color: #008734;
+}
+.addbtn:hover{
+    color: rgb(255, 255, 255);
+    background-color: #004b1d;
+}
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #377db7;
+  font-weight: 600;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+  color: #000000;
+}
+
+.tab-content.active {
+  display: block;
+}
